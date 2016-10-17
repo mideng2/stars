@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 0;
+        }
+        .ad{
+            width: 20%;
+            margin: 0 auto;
+        }
+        .ad ul{
+            list-style:none;
+        }
+        .ad ul li{
+            height: 70px;
+            line-height: 70px;
+            vertical-align: middle;
+            font-size: 24px;
+            background: rgba(0, 208, 188, 0.16);
+            color: rgb(255, 129, 41);
+            font-weight: bolder;
+            font-family: "ff-meta-web-pro", sans-serif;
+            border: 1px dashed rgba(26, 61, 74, 0.76);
+            border-radius: 10px;
+            text-shadow:  5px 5px 10px #a4a7ff;
+        }
+        .ad ul li .item{
+            display: inline-block;
+            height: 70px;
+            width: 70px;
+            float: left;
+            background: url("icon.png") no-repeat  -70px -140px/200% 1000%;
+        }
+        .ad ul li:hover{
+            background-color: rgba(0, 208, 188, 0.52);
+            color: rgb(255, 249, 22);
+            text-shadow:  1px 1px 1px #ff90c4;
+        }
+
+        /*.ad ul li .item:after{*/
+            /*content: "";*/
+            /*display: block;*/
+            /*height: 0;*/
+            /*visibility: hidden;*/
+        /*}*/
+    </style>
+</head>
+<body>
+    <div class="ad">
+        <ul>
+            <li><i class="item"></i>小星星~~小漂酿！~</li>
+            <li><i class="item"></i>小星星~~小漂酿！~</li>
+            <li><i class="item"></i>小星星~~小漂酿！~</li>
+            <li><i class="item"></i>小星星~~小漂酿！~</li>
+            <li><i class="item"></i>小星星~~小漂酿！~</li>
+            <li><i class="item"></i>小星星~~小漂酿！~</li>
+            <li><i class="item"></i>小星星~~小漂酿！~</li>
+            <li><i class="item"></i>小星星~~小漂酿！~</li>
+            <li><i class="item"></i>小星星~~小漂酿！~</li>
+            <li><i class="item"></i>小星星~~小漂酿！~</li>
+        </ul>
+    </div>
+</body>
+<script type="text/javascript">
+var list = document.querySelectorAll('li');
+var i =null;
+
+for(i=0;i<list.length;i++){
+    (function(i){
+        list[i].onmouseover = function(){
+            this.querySelector('.item').style.backgroundPosition='-70px '+(-i*70)+'px';
+        }
+        list[i].onmouseout = function(){
+            this.querySelector('.item').style.backgroundPosition='0 0';
+        }
+    })(i)
+}
+
+
+</script>
+</html>
